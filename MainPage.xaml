@@ -4,25 +4,40 @@
              x:Class="TipCalculator.MainPage">
 
     <ScrollView>
-        
-        <VerticalStackLayout>
-            <Label Text="Total da conta"/>
-            <Entry x:Name="billInput" Placeholder="Insira o valor" Keyboard="Numeric"/>
-            <Label Text="Gorjeta" />
-            <Label x:Name="tipOutput" Text="0.00" />
 
-            <Label Text="Total" />
-            <Label x:Name="TotalOutput" Text="0.00" />
+        <VerticalStackLayout Padding="40" Spacing="10">
+            
+            <HorizontalStackLayout Spacing="10">
+                <Label WidthRequest="100" VerticalOptions="Center" Text="Total da conta"/>
+                <Entry x:Name="billInput" Placeholder="Insira o valor" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
 
-            <Label Text="Porcentagem de gorjeta" />
-            <Label x:Name="tipPercent" Text="15%" />
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Label Text="Gorjeta"  WidthRequest="100" />
+                <Label x:Name="tipOutput" Text="0.00" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" >
+                <Label Text="Total" WidthRequest="100" />
+                <Label x:Name="TotalOutput" Text="0.00" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout VerticalOptions="End" Spacing="10">
+                <Label Text="Porcentagem de gorjeta" WidthRequest="100" />
+                <Label x:Name="tipPercent" Text="15%" />
+            </HorizontalStackLayout>
+            
             <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15"/>
 
-            <Button Text="15%" Clicked="OnNormalTip" />
-            <Button Text="20%" Clicked="OnGenerousTip" />
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Button Text="15%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnNormalTip" />
+                <Button Text="20%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnGenerousTip" />
+            </HorizontalStackLayout>
 
-            <Button x:Name="roundUp" Text="Round Up" />
-            <Button x:Name="roundDown" Text="Round Down" />
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Button x:Name="roundUp" Text="Round Up" WidthRequest="150" HorizontalOptions="Center" />
+                <Button x:Name="roundDown" Text="Round Down" WidthRequest="150" HorizontalOptions="Center" />
+            </HorizontalStackLayout>
             
         </VerticalStackLayout>
         
